@@ -27,10 +27,10 @@ def student_ubsent (absent_student)
     absent.each_with_index do |element , index|
       caunt +=1 if index !=0 && element =="A"
     end
-    puts "#{absent[0]} tiene #{caunt} inasistencias"
+    puts "el alumno/a #{absent[0]} tiene #{caunt} inasistencias"
   end
 end
-#3)estudiantes aprovados
+#3)estudiantes aprobados pruebalo
 def student_no_fail(student_avarage , approved)
   student_avarage.each do |student|
     suma =0
