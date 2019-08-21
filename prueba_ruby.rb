@@ -30,7 +30,7 @@ def student_ubsent (absent_student)
     puts "el alumno/a #{absent[0]} tiene #{caunt} inasistencias"
   end
 end
-#3)estudiantes aprobados pruebalo
+#3)estudiantes aprobados
 def student_no_fail(student_avarage , approved)
   student_avarage.each do |student|
     suma =0
