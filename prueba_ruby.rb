@@ -18,7 +18,18 @@ def avarage(student_avarage)
       puts "  #{student[0]} tiene como pormedio de notas un : #{avarage} "
   end
 end
-
+#2)inasistencias
+def student_ubsent (absent_student)
+  absent_student.each do |absent|
+    caunt=0
+    absent.each_with_index do |element , index|
+      if index !=0 && element =="A"
+        caunt +=1
+      end
+    end
+    puts "#{absent[0]} tiene #{caunt} inasistencias"
+  end
+end
 
 
 
