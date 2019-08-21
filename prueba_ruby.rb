@@ -5,7 +5,7 @@ def read_alum(file_name)
   alum
 end
 #1)promedio de notas de cada alumno
-def avarage(student_avarage)
+def avarage_student(student_avarage)
   student_avarage.each do |student|
     suma =0
     avarage=0
@@ -23,9 +23,7 @@ def student_ubsent (absent_student)
   absent_student.each do |absent|
     caunt=0
     absent.each_with_index do |element , index|
-      if index !=0 && element =="A"
-        caunt +=1
-      end
+      caunt +=1 if index !=0 && element =="A"
     end
     puts "#{absent[0]} tiene #{caunt} inasistencias"
   end
@@ -42,12 +40,8 @@ def student_no_fail(student_avarage , approved)
         avarage=suma.to_f/index
       end
     end
-    if approved == 0
-      approved +=aux
-    end
-    if avarage >= approved
-      puts "  #{student[0]}  #{avarage} "
-    end
+    approved = aux if approved == 0
+    puts "  aprobo #{student[0]} con un  #{avarage} "  if avarage >= approved
   end
 end
 
@@ -66,13 +60,13 @@ end
     option=gets.chomp.to_i
     case option
     when 1
-      avarage(student)
+      avarage_student(student)
     when 2
       student_ubsent(student)
     when 3
       puts "ingrese una nota"
-      approved=gets.chomp.to_i
-      student_no_fail(student , approved)
+      approved=gets.chomp.to_f
+      student_no_fail(student ,approved)
     when 4
       puts "exit"
     else
