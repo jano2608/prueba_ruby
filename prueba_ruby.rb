@@ -4,15 +4,17 @@ def read_alum(file_name)
   file.close
   alum
 end
+
+
 #1)promedio de notas de cada alumno
 def avarage_student(student_avarage)
   student_avarage.each do |student|
-    suma =0
+    sum=0
     avarage=0
       student.each_with_index do |grades , index|
         if index!=0
           suma +=grades.to_i
-          avarage=suma.to_f/index
+          avarage=sum.to_f/index
         end
       end
       puts "  #{student[0]} tiene como pormedio de notas un : #{avarage} "
@@ -28,7 +30,7 @@ def student_ubsent (absent_student)
     puts "#{absent[0]} tiene #{caunt} inasistencias"
   end
 end
-#3
+#3)estudiantes aprovados
 def student_no_fail(student_avarage , approved)
   student_avarage.each do |student|
     suma =0
@@ -68,7 +70,7 @@ end
       approved=gets.chomp.to_f
       student_no_fail(student ,approved)
     when 4
-      puts "exit"
+      puts "Adios"
     else
       puts "opcion no valida"
     end
