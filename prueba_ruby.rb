@@ -27,7 +27,7 @@ def student_ubsent (absent_student)
         caunt +=1
       end
     end
-    puts "#{absent[0]} tiene #{caunt} en el dia #{index}inasistencias"
+    puts "#{absent[0]} tiene #{caunt} inasistencias"
   end
 end
 #3
